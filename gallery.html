@@ -1,0 +1,81 @@
+
+    <div class="collapse bg-inverse lazy" id="navbarHeader">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8 py-4">
+            <h4 class="text-white">About</h4>
+            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste!</p>
+          </div>
+          <div class="col-sm-4 py-4 text-right">
+            <h4>Contact</h4>
+            <ul class="list-unstyled">
+              <li><a href="#">Follow on Twitter</a></li>
+              <li><a href="#">Like on Facebook</a></li>
+              <li><a href="#">Email me</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="navbar navbar-inverse bg-inverse lazy gallery__navbar">
+      <div class="container d-flex justify-content-between">
+        <a href="#" class="navbar-brand">Khoi.Ph</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </div>
+
+    <section class="jumbotron text-center lazy gallery__slide">
+
+        <div class="landing__triangle customized"> 
+            <svg viewBox="0 0 340 285">
+                <g fill="none" fill-rule="evenodd" stroke="black" stroke-width="3" class="lines">
+                    <path d="M170 0 L0 280 L340 280 Z"/>
+                </g>
+            </svg> 
+        </div>
+        <div class="gallery__intro__info">
+            <h1 class="jumbotron-heading toX">My Collection</h1>
+            <p class="lead text-muted toMX">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil esse et magnam at, ullam inventore veritatis a, dolores aperiam quis nulla! Placeat cum, ratione nisi, quod qui sed est pariatur.</p>
+            <p>
+              <a href="https://www.flickr.com/people/67108637@N06/" class="btn pop btn__fb btn-primary mr-20">Subcribe My FlickR</a>
+              <a href="https://www.facebook.com/khoi.drca" class="btn pop btn__flickr btn-secondary ml-20">Follow My Facebook</a>
+            </p>
+        </div>
+    </section>
+
+    <div class="gallery__album">
+
+        <div class="container">
+            <div class="row"><h1 class="gallery__heading text-uppercase">Photostream</h1></div>
+            <div class="row">
+                <div class="card-columns" style="width: 100%;">
+                    <div class="card lazy gallery__card" ng-repeat="photo in photoList">
+                        <img style="width: 100%; display: block;" ng-src="http://c1.staticflickr.com/{{photo.farm}}/{{photo.server}}/{{photo.id}}_{{photo.secret}}_m.jpg" data-holder-rendered="true" ">
+                        <a href="https://www.flickr.com/photos/67108637@N06/{{photo.id}}" ng-click="openModal()">
+                            <div class="content">
+                                <h2>{{photo.title}}</h2>
+                                <p class="extra__info__p">A wonderful serenity has taken possession of my entire soul.</p>
+                            </div>
+                        </a>
+                        <div class="card-block p-3">
+                          <h4 class="card-title">{{ photo.title }}</h4>
+                          <p class="card-text">{{ photo.title | randomString }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  
+    <footer class="lazy">
+        <div class="container">
+            <p class="float-right">
+              <a href="#">Back to top</a>
+            </p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam laudantium, beatae facere est repellendus debitis.</p>
+            <p>New member? <a href="../../">Visit my homepage</a> or read my <a href="../../getting-started/">blog</a>.</p>
+        </div>
+    </footer>
